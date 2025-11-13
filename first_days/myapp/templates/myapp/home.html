@@ -1,0 +1,15 @@
+我的博客文章
+
+    {% if articles %}
+        {% for article in articles %}
+
+{{ article.title }}
+
+{{ article.created_at|date:"Y年m月d日 H:i" }}
+
+{{ article.content|truncatechars:200 }}
+
+        {% endfor %}
+    {% else %}
+还没有发布的文章。
+    {% endif %}
